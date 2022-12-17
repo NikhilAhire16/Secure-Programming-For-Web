@@ -5,7 +5,9 @@ if (!isset($_SESSION['logged_in']) && !isset($_POST['pay'])) {
     header('Location: sign');
 }
 
-if (isset($_POST['pay'])) {
+
+
+if ((isset($_POST['pay'])) &&  $_POST['token'] == $_SESSION['token']) {
 
     include 'db.php';
 

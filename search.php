@@ -49,7 +49,7 @@ else {
        $perpage = isset($_GET['per-page']) && $_GET['per-page'] <= 16 ? (int)$_GET['per-page'] : 16;
 
        $start = ($page > 1) ? ($page * $perpage) - $perpage : 0;
-       if(!preg_match ("/^[a-zA-Z0-9 ]*$/", $word)) {
+       if((!preg_match ("/^[a-zA-Z0-9 ]*$/", $word)) &&  $_POST['token'] !== $_SESSION['token']) {
             echo "Invalid input";
        } else{
 

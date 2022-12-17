@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['token'])) {
+    $_SESSION['token'] = md5(uniqid(mt_rand(), true));
+}
+
 if (!isset($_SESSION['logged_in']) && !isset($_SESSION['item'])) {
     header('Location: sign');
 }
@@ -39,6 +43,7 @@ require $nav;?>
 <div class="container checkout">
     <div class="card pay">
         <form method="post" action="final">
+        <input type="hidden" name="token" value="<?php echo isset($_SESSION['token'])? $_SESSION['token'] : '' ?>">
             <div class="row">
 
                 <div class="input-field col s6">

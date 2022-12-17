@@ -63,6 +63,7 @@ require $nav; ?>
         <nav class="animated slideInUp wow">
             <div class="nav-wrapper">
                 <form method="GET" action="search.php">
+                <input type="hidden" name="token" value="<?php echo isset($_SESSION['token'])? $_SESSION['token'] : '' ?>">
                     <div class="input-field">
                         <input id="search" class="searching" type="search" name='searched' required>
                         <label for="search"><i class="material-icons">search</i></label>

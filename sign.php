@@ -110,7 +110,7 @@ require $nav; ?>
                                         <p>By Registering, you agree that you've read and accepted our <a href="">User Agreement</a>,
                                             you're at least 18 years old, and you consent to our <a href="">Privacy Notice and receiving</a>
                                             marketing communications from us.</p>
-                                    </div>
+                                    </div>  
                                 </form>
                             </div>
                         </div>
