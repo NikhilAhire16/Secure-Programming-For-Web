@@ -1,7 +1,8 @@
 <?php
-
 session_start();
-
+if (!isset($_SESSION['token'])) {
+    $_SESSION['token'] = md5(uniqid(mt_rand(), true));
+}
 if (!isset($_SESSION['logged_in'])) {
     $nav ='includes/nav.php';
 }
@@ -40,6 +41,7 @@ require $nav; ?>
                             <div class="row">
 
                                 <form class="col s12" method="POST" enctype="multipart/form-data">
+                                <input type="hidden" name="token" value="<?php echo isset($_SESSION['token'])? $_SESSION['token'] : '' ?>">
                                     <div class="row">
 
                                         <div class="input-field col s6">

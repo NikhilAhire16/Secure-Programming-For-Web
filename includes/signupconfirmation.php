@@ -9,10 +9,11 @@ if (isset($_POST['signup'])) {
   $city = filter_var($_POST['city'], FILTER_SANITIZE_STRING);
   $country = $_POST['country'];
   $encryptedpass = password_hash($password,PASSWORD_BCRYPT);
+  $token = filter_var($_POST['token'], FILTER_SANITIZE_STRING);
 
 
-  if((preg_match ("/^[a-zA-Z ]*$/", $firstname)) && (preg_match ("/^[a-zA-Z ]*$/", $lastname)) && (preg_match ("/^[a-zA-Z ]*$/", $address)) && (preg_match ("/^[a-zA-Z ]*$/", $city)))
-  {
+  if((preg_match ("/^[a-zA-Z ]*$/", $firstname)) && (preg_match ("/^[a-zA-Z ]*$/", $lastname)) && (preg_match ("/^[a-zA-Z ]*$/", $address)) 
+  && (preg_match ("/^[a-zA-Z ]*$/", $city)) &&  $token == $_SESSION['token'] ) {
  
   include 'db.php';
 

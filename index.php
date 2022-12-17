@@ -1,6 +1,9 @@
 <?php
 
 session_start();
+if (!isset($_SESSION['token'])) {
+    $_SESSION['token'] = md5(uniqid(mt_rand(), true));
+}
 
 if (!isset($_SESSION['logged_in'])) {
     $nav = 'includes/nav.php';
