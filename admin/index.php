@@ -147,4 +147,16 @@ if ($_SESSION['role'] !== 'admin') {
          </div>
        </div>
 </div>
+<?php
+//Get Heroku ClearDB connection information
+$cleardb_url = parse_url(getenv("mysql://b8239eb638aaff:9ea7a2ac@us-cdbr-east-06.cleardb.net/heroku_3aaeb78f9450d07?reconnect=true"));
+$cleardb_server = $cleardb_url["mysql://b8239eb638aaff:9ea7a2ac@us-cdbr-east-06.cleardb.net"];
+$cleardb_username = $cleardb_url["b8239eb638aaff"];
+$cleardb_password = $cleardb_url["9ea7a2ac"];
+$cleardb_db = substr($cleardb_url["path"],1);
+$active_group = 'default';
+$query_builder = TRUE;
+// Connect to DB
+$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+?>
  <?php require 'includes/footer.php'; ?>
