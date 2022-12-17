@@ -55,7 +55,7 @@ require $nav;?>
                         <option value="Ireland">Morocco</option>
                         <option value="Egypt">Egypt</option>
                         <option value="Algeria">Algeria</option>
-                        <option value="Austria">Algeria</option>
+                        <option value="Austria">Austria</option>
                     </select>
                     <label>Country</label>
                 </div>
