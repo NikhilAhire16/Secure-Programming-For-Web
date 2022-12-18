@@ -33,11 +33,11 @@ if ((isset($_POST['pay'])) &&  $_POST['token'] == $_SESSION['token']) {
             $quantitycmd = $rowcmd['quantity'];
             $pricecmd = $rowcmd['price'];
             $idcmd = $rowcmd['idcmd'];
-            $firstnamecmd = $_POST['firstname'];
-            $lastnamecmd = $_POST['lastname'];
+            $firstnamecmd = filter_var($_POST['firstname'], FILTER_SANITIZE_STRING);
+            $lastnamecmd = filter_var($_POST['lastname'], FILTER_SANITIZE_STRING);
             $countrycmd = $_POST['country'];
-            $citycmd = $_POST['city'];
-            $addresscmd = $_POST['address'];
+            $citycmd = filter_var($_POST['city'], FILTER_SANITIZE_STRING);
+            $addresscmd = filter_var($_POST['address'], FILTER_SANITIZE_STRING);
 
             $idusercmd = $rowcmd['iduser'];
 

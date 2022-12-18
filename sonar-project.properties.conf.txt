@@ -1,0 +1,2 @@
+# must be unique in a given SonarQube instance
+sonar.projectKey=8f13b6c6193080f1239677537b816e72d00308f1

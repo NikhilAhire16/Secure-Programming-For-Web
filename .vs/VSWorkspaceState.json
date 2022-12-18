@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\includes"
+    "\\includes",
+    "\\includes\\fpdf",
+    "\\includes\\fpdf\\doc"
   ],
   "PreviewInSolutionExplorer": false
 }

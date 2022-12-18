@@ -15,6 +15,7 @@ if (!isset($_SESSION['logged_in'])) {
 require 'includes/header.php';
 require $nav; ?>
 
+
 <style>
     .autocomplete {
         /*the container must be positioned relative:*/
@@ -201,6 +202,7 @@ require $nav; ?>
 <div class="container contact" id="contact">
     <div class="row">
         <form action="https://postmail.invotes.com/send" method="post" id="email_form" class="col s12 animated slideInUp wow">
+
             <h3 class="animated slideInUp wow">Contact Us</h3>
             <div class="row">
                 <div class="input-field col s12 m6">

@@ -32,8 +32,33 @@ if (isset($_POST['login'])) {
 
   if ($email !== $user_email && $password !== $user_password) {
     echo "<div class='center-align meh'>
-  <h5 class='red-text'>Wrong Info</h5>
-</div>";
+        <h5 class='red-text'>Wrong Info</h5>
+    </div>";
+
+    $_SESSION['u']+=1;
+
+    echo "You Enter ".$_SESSION['u']."Time Wrong  UID and Password";
+    echo "<br><a href='sign.php'>Try Again</a>";
+
+    echo $_SESSION['u'];
+
+    if($_SESSION['u']>2)
+    {
+        $_SESSION['u'] = 0;
+        ?>
+        <div style='color:white; padding:20px; font-size:2.5em; background:tomato;'><b>Block User</b> <br>
+            <?php echo $_COOKIE['user'] ?>
+        </div>
+        <script>
+             var form = document.getElementById("login-form");
+             var elements = form.elements;
+             for (var i = 0, len = elements.length; i < len; ++i) {
+                 elements[i].readOnly = true;
+             }
+        </script>
+        <?php
+
+    }
   }
 
 

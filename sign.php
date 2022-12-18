@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); error_reporting (E_ALL ^ E_NOTICE);
 if (!isset($_SESSION['token'])) {
     $_SESSION['token'] = md5(uniqid(mt_rand(), true));
 }
@@ -119,24 +119,35 @@ require $nav; ?>
 
                         <div class="card">
                             <div class="row">
-                                <form class="col s12" method="POST">
+                            <?php
 
+                            if( isset($_COOKIE['user']) )
+                            {
+                            ?>
+                                <meta http-equiv="refresh" content="20"> 
+                            <?php
+                               // echo "<div style='color:white; padding:20px; font-size:2.5em; background:tomato;'><b>Block User</b> <br>".$_COOKIE['user']."</div>";
+                            }else {
+                                ?>
+                                <form id="login-form" class="col s12" method="POST">
                                     <div class="input-field col s12">
                                         <i class="material-icons prefix">email</i>
-                                        <input id="icon_prefix" type="email" name="emaillog" class="validate">
-                                        <label for="icon_prefix" data-error="Invalid email" data-success="Valid Email">Email</label>
-                                        
+                                        <input id="icon_prefix" type="text" name="emaillog" class="validate login-form">
+                                        <label for="icon_prefix">Email</label>
                                     </div>
                                     <div class="input-field col s12 meh">
                                         <i class="material-icons prefix">lock</i>
-                                        <input id="icon_prefix" type="password" name="passworddb" class="validate">
+                                        <input id="icon_prefix" type="password" name="passworddb" class="validate login-form">
                                         <label for="icon_prefix">Password</label>
                                     </div>
+                                    <?php
+                            }
+                            ?>  
 
-                                    <?php require 'includes/loginconfirmation.php';?>
                                     <div class="center-align">
                                         <button type="submit" name="login" class="btn button-rounded waves-effect waves-light ">Login</button>
                                     </div>
+                                    <?php require 'includes/loginconfirmation.php';?>
 
                                 </form>
                             </div>

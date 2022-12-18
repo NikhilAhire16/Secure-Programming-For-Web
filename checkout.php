@@ -16,12 +16,12 @@ else {
     $nav ='includes/navconnected.php';
     $idsess = $_SESSION['id'];
 
-    $email_sess = $_SESSION['email'];
+    $email_sess =  filter_var($_SESSION['email'], FILTER_VALIDATE_EMAIL);
     $country_sess = $_SESSION['country'];
-    $firstname_sess = $_SESSION['firstname'];
-    $lastname_sess = $_SESSION['lastname'];
-    $city_sess = $_SESSION['city'];
-    $address_sess = $_SESSION['address'];
+    $firstname_sess = filter_var($_SESSION['firstname'], FILTER_SANITIZE_STRING);
+    $lastname_sess = filter_var($_SESSION['lastname'], FILTER_SANITIZE_STRING);
+    $city_sess = filter_var($_SESSION['city'], FILTER_SANITIZE_STRING);
+    $address_sess = filter_var($_SESSION['address'], FILTER_SANITIZE_STRING);
 }
 
 require 'includes/header.php';
