@@ -39,7 +39,7 @@ Step 5: Visit localhost://filepath/index.php
 
 Host: localhost<br>
 User: root<br>
-Password: 
+Password:""
 Name: ecommerce
 
 
