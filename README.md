@@ -1,17 +1,25 @@
-# An ecommerce website using PHP
-An e-commerce php and mysql website built from scratch to get started with as a starter template.
+# SPAN
+This web application is created for academic purpose of Continous Assesment of Secure Programming for Web.
+ Team Members
+ 1.Nikhil Ahire
+ 2.Pushkar Yewalekar
+ 3.Abhay Singh
+ 4.Shubham Gulia
 
-## Homepage
-![GUI](https://github.com/jacobjohn2016/PHP-ecommerce/raw/master/home.png)
+## How to Run the Project
 
-## Documentation
-* [Report](./Report.pdf)
-* [Presentation](./project_presentation.pptx)
+Pre Requistes - XAMPP Server
+
+Step 1 : Download the code and unzip it on your local machine.
+Step 2 : Copy the extracted folder inside xampp/htdocs
+Step 3 : Create a new database inside phpMyAdmin.
+Step 4: Import ecommerce.sql in PhpMyAdmin.
+Step 5: Visit localhost://filepath/index.php
 
 ## Site functions
 * Search for products (using autocomplete)
 * Displays an array of popular selling products on the front page
-* Contact us form that directly e-mails messages to site admin
+* Contact us form that directly e-mails messages to site.
 
 ### Admin
 * Functionality to add and delete products
@@ -31,81 +39,9 @@ An e-commerce php and mysql website built from scratch to get started with as a 
 
 Host: localhost<br>
 User: root<br>
-Password: MyNewPass<br>
+Password: 
 Name: ecommerce
 
-## Directories
-```
-.
-├── LICENSE.txt
-├── README.md
-├── admin
-│   ├── addp.php
-│   ├── addproduct.php
-│   ├── allusers.php
-│   ├── deletecmd.php
-│   ├── deleteproduct.php
-│   ├── deleteuser.php
-│   ├── editproduct.php
-│   ├── editprofile.php
-│   ├── includes
-│   │   ├── footer.php
-│   │   ├── header.php
-│   │   ├── loginconfirmation.php
-│   │   ├── navconnected.php
-│   │   ├── pictures.php
-│   │   └── signupconfirmation.php
-│   ├── index.php
-│   ├── infoproduct.php
-│   ├── logout.php
-│   ├── products.php
-│   ├── productstock.php
-│   ├── src
-│   │   ├── css
-│   │   ├── fonts
-│   │   ├── img
-│   │   └── js
-│   ├── stats.php
-│   ├── success.php
-│   └── users
-├── cart.php
-├── category.php
-├── checkout.php
-├── db.php
-├── deletecommand.php
-├── deleteorder.php
-├── details.php
-├── downloadorder.php
-├── ecommerce.sql
-├── editprofile.php
-├── final.php
-├── includes
-│   ├── footer.php
-│   ├── fpdf
-│   ├── header.php
-│   ├── loginconfirmation.php
-│   ├── logout.php
-│   ├── nav.php
-│   ├── navconnected.php
-│   ├── secondfooter.php
-│   └── signupconfirmation.php
-├── index.php
-├── orders.php
-├── product.php
-├── products
-├── productsimg
-├── request.php
-├── search.php
-├── sign.php
-├── src
-│   ├── css
-│   ├── fonts
-│   ├── img
-│   └── js
-└── users
-
-Total: 65 directories, 521 files
-```
 
 ## Credits
-The original project can be found on [SmartShop](https://github.com/smakosh/Smartshop).
+We would like to give credits to the original project which can be found on [SmartShop](https://github.com/smakosh/Smartshop). We used some part of the application as a base and implemented additional security features based on teaching and course we have gone through.
